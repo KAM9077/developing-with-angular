@@ -20,7 +20,7 @@ import { RuntimeContentComponent } from './runtime-content/runtime-content.compo
     DynamicSample1Component,
     DynamicSample2Component,
     UnknownDynamicComponent,
-    RuntimeContentComponent
+    RuntimeContentComponent,
   ],
   imports: [
     BrowserModule,
