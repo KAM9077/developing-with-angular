@@ -1,4 +1,14 @@
 <ul>
-  <ng-template ngFor [ngForOf]="items" [ngForTemplate]="template">
-  </ng-template>
+  <!-- <ng-template ngFor [ngForOf]="items" [ngForTemplate]="template">
+  </ng-template> -->
+
+  <ng-template #defaultColFilter> <div>Default Column Filter</div>  </ng-template>
+  <ng-template #defaultTable> <div>Default Table</div>  </ng-template>
+  <ng-template #defaultPagination> <div>Default Pagination</div>  </ng-template>
+
+  <ng-container [ngTemplateOutlet]="aaa || defaultColFilter" [ngTemplateOutletContext]="{ $implicit: items }"> </ng-container>
+  <ng-container [ngTemplateOutlet]="aaa || defaultTable" [ngTemplateOutletContext]="{ $implicit: items }"> </ng-container>
+  <ng-container [ngTemplateOutlet]="aaa || defaultPagination" [ngTemplateOutletContext]="{ $implicit: items }"> </ng-container>
+
+  <!-- <ng-container *ngTemplateOutlet=" aaa ? aaa : defaultTabButtons"></ng-container> -->
 </ul>
