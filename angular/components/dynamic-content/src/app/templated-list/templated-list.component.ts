@@ -18,4 +18,5 @@ export class TemplatedListComponent {
   ]
 
   @Input('selector') aaa: TemplateRef<any> | undefined
+  @Input('selector2') bbb: TemplateRef<any> | undefined
 }
